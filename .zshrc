@@ -14,7 +14,7 @@ parse_git_branch() {
 setopt prompt_subst
 
 # Config for prompt. PS1 synonym.
-prompt='%F{magenta}devpod%F{green}%~%F{yellow}$(parse_git_branch)%F{white}%# '
+prompt='%F{magenta}local%F{green}%~%F{yellow}$(parse_git_branch)%F{white}%# '
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -55,3 +55,6 @@ alias ll="ls -alh"
 
 # initialize z
 . ~/z.sh
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
